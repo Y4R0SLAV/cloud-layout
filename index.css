@@ -79,6 +79,7 @@ select {
 
 body {
   font-family: 'Roboto';
+  overflow-x: hidden;
 }
 
 .container {
@@ -210,7 +211,7 @@ body {
 }
 
 .search__logo {
-  width: 33px;
+  width: 25px;
   height: 20px;
 }
 
@@ -227,7 +228,6 @@ label .menu {
   transition: .5s ease-in-out;
   box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
   cursor: pointer;
-  
 }
 
 label .hamburger {
@@ -264,7 +264,6 @@ label input { display: none; }
 label input:checked + .menu {
   box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
   border-radius: 0;
-  
 }
 
 label input:checked + .menu .hamburger {
@@ -292,13 +291,14 @@ label input:checked + .menu + ul { opacity: 1; }
 label ul {
   z-index: 200;
   position: absolute;
-  top: 50%;
+  top: 200%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: .25s 0s ease-in-out;
   transition: .25s 0s ease-in-out;
+  overflow-y: hidden;
+  width: 300px;
+  max-height: 1000px;
 }
 
 label a {
@@ -306,9 +306,49 @@ label a {
   display: block;
   color: #f38630;
   text-decoration: none;
+  font-size: 24px;
 }
 
+label .hamburger__nav  {
+  margin-top: 150px;
+}
 
+label .hamburger__nav > div {
+  margin-bottom: 15px;
+}
+
+.label__text {
+  font-size: 22px;
+  color: #cecece
+}
+
+.label__number {
+  font-size: 26px;
+  color: red;
+  width: 200px;
+}
+
+.label__contact::before {
+  display: none;
+}
+
+.label__contact {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+.label__contact img{
+  width: 40px;
+  height: 30%;
+}
+.label__info {
+  text-align: left;
+}
+
+body.burger {
+  overflow-y: hidden;
+}
 
 .s1 {
   background: url(/source/img/bg_46.jpg) no-repeat center;
@@ -357,10 +397,14 @@ label a {
   margin-right: 10px;
 }
 
+label {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .header__logo {
     background-color: #008ce6;
-    padding: 10px 5px;
+    padding: 10px 5px; 
   }
   .nav > .nav__item:not(:last-child) {
     margin-right: 20px;
@@ -414,6 +458,12 @@ label a {
     margin-right: 10px;
     padding: 8px 10px;
     justify-content: center;
+  }
+  .header__desktop {
+    display: none;
+  }
+  label {
+    display:block;
   }
 }
 
@@ -544,6 +594,13 @@ label a {
     padding: 15px 0;
   }
 }
+@media (max-width: 778px) {
+  .s3__button {
+    margin: 0 5px;
+    text-align: center;
+  }
+}
+
 
 .s4__header {
   margin-top: 100px;
@@ -735,7 +792,16 @@ label a {
     flex-direction: column;    
   }
     /* сложить меню в бутерброд */
-
+  .s4__header {
+    display: block;
+  }
+  .s4__types {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 35px;
+  }
 }
 
 .s5 {
