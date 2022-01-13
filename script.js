@@ -21,3 +21,13 @@ for (let elem of elements) {
 
 burger.addEventListener('click', (e) => toggleBodyOverflow(e))
 
+
+let check1 = document.querySelector('.s1__button1')
+let check2 = document.querySelector('.s1__button2')
+
+check1.addEventListener('click', () => alert(111))
+check2.addEventListener('click', () => alert(222))
+
+let hamElems = document.querySelectorAll('.hamburger__item')
+
+hamElems[0].addEventListener('click', () => alert('hoi'))

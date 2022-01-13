@@ -79,7 +79,6 @@ select {
 
 body {
   font-family: 'Roboto';
-  overflow-x: hidden;
 }
 
 .container {
@@ -262,6 +261,7 @@ label input { display: none; }
 label input:checked + .menu {
   box-shadow: 0 0 0 100vw #FFF, 0 0 0 125vh #FFF;
   border-radius: 0;
+  pointer-events: none;
 }
 
 label input:checked + .menu .hamburger {
@@ -286,6 +286,15 @@ label input:checked + .menu .hamburger:before {
 
 label input:checked + .menu + ul { opacity: 1; }
 
+.hamburger__item {
+  pointer-events: none;
+}
+
+body.burger .hamburger__item{
+  pointer-events: all;
+}
+
+
 label ul {
   z-index: 200;
   position: absolute;
@@ -295,7 +304,6 @@ label ul {
   opacity: 0;
   transition: .25s 0s ease-in-out;
   width: 300px;
-  /* max-height: 100vh; */
 }
 
 label a {
@@ -307,7 +315,7 @@ label a {
 }
 
 label .hamburger__nav  {
-  margin-top: 150px;
+  margin-top: 280px;
 }
 
 label .hamburger__nav > div {
@@ -346,6 +354,10 @@ label .hamburger__nav > div {
 
 body.burger {
   overflow-y: hidden;
+}
+
+body.burger .s1__button1, body.burger .s1__button2 {
+  pointer-events: none;
 }
 
 .s1 {
