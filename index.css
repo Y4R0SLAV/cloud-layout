@@ -790,7 +790,7 @@ label {
     flex-direction: column;    
   }
   .s4__content1, .s4__content2, .s4__content3, .s4__content4, .s4__content5 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
     /* сложить меню в бутерброд */
