@@ -217,13 +217,11 @@ body {
 
 label .menu {
   position: absolute;
-  right: -100px;
-  top: -100px;
+  right: 0px;
+  top: -90px;
   z-index: 100;
-  width: 200px;
-  height: 200px;
-  background: #FFF;
-  border-radius: 50% 50% 50% 50%;
+  width: 120px;
+  height: 0;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
@@ -232,7 +230,7 @@ label .menu {
 
 label .hamburger {
   position: absolute;
-  top: 135px;
+  top: 140px;
   left: 50px;
   width: 30px;
   height: 2px;
@@ -262,7 +260,7 @@ label .hamburger:after { bottom: -10px; }
 label input { display: none; }
 
 label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 125vh #FFF;
   border-radius: 0;
 }
 
@@ -296,9 +294,8 @@ label ul {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: .25s 0s ease-in-out;
-  overflow-y: hidden;
   width: 300px;
-  max-height: 1000px;
+  /* max-height: 100vh; */
 }
 
 label a {
@@ -338,6 +335,7 @@ label .hamburger__nav > div {
   justify-content: center;
   align-items: center;
 }
+
 .label__contact img{
   width: 40px;
   height: 30%;
@@ -791,6 +789,10 @@ label {
     display: flex;
     flex-direction: column;    
   }
+  .s4__content1, .s4__content2, .s4__content3, .s4__content4, .s4__content5 {
+    margin-bottom: 5px;
+  }
+
     /* сложить меню в бутерброд */
   .s4__header {
     display: block;
